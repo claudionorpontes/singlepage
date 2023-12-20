@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+
+}
+
+header {
+  background-color: aquamarine;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+
+}
+label{
+  float: 150px;
+}
+
+nav {
+  float: right;
+  width: 15%;
+  height: 50px
+  background 100px
+  padding 25px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 100px;
+}
+
+article {
+  float: left;
+  padding: 28px;
+  width: 75%;
+  background-color: white;
+  height: 400px;
+}
+
+section {
+  align-content: center
+
+}
+
+div{
+  background-color: wheat;
+  height: 100%;
+}
+
+ form{
+  text-align: right;
+  width: 10px;
+  margin: 10px;
+}
+ button {
+  width: 80px;
+  margin: 15px;
+  width: 150px;
+}
+
+@media (max-width: 300px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
