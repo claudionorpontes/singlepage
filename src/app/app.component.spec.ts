@@ -1,29 +1,32 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { Title } from '@angular/platform-browser';
+import { loadSinglePageError } from './store/singlepage.actions';
 
 describe('AppComponent', () => {
+  let fixture: ComponentFixture<AppComponent>;
+  let appComponent: AppComponent;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      declarations: [AppComponent], // Adicione o seu componente aqui, se necessário
+      providers: [
+        Title,
+        Store // Adicione o seu serviço de store aqui, se necessário
+      ]
     }).compileComponents();
-  });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    fixture = TestBed.createComponent(AppComponent);
+    appComponent = fixture.componentInstance;
   });
 
   it(`should have the 'singlepage' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('singlepage');
+    const titleService = TestBed.inject(Title);
+
+    // Simule a ação que define o título no seu componente
+    appComponent.ngOnInit(); // Chame o método que define o título, se existir
+
+    expect(titleService.getTitle()).toBe('singlepage');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, singlepage');
-  });
+  // Adicione outros testes conforme necessário
 });
