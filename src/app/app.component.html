@@ -21,25 +21,27 @@ header {
 
 }
 label{
-  float: 150px;
+  float: 100px;
+  width: 1%;
+  background-position: 150px;
+  font-weight: 100%;
 }
 
 nav {
   float: right;
   width: 15%;
   height: 50px
-  background 100px0
-  padding 25px;
 }
 
 nav ul {
   list-style-type: none;
   padding: 100px;
+
 }
 
 article {
   float: left;
-  padding: 28px;
+  padding: 10px;
   width: 75%;
   background-color: white;
   height: 400px;
@@ -51,26 +53,38 @@ section {
 }
 
 div{
-  background-color: wheat;
+  background-color: beige;
   height: 100%;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  margin: 15px;
 }
 
- form{
+ form {
   text-align: right;
   width: 10px;
   margin: 10px;
 }
+
  button {
-  width: 80px;
+
+  width: 100px;
   margin: 15px;
   width: 150px;
 }
 
 @media (max-width: 300px) {
+
   nav, article {
     width: 100%;
     height: auto;
   }
+}
+tag{
+  font-size: 18px;
+
 }
 
 </style>
@@ -84,17 +98,18 @@ div{
         </h1>
     </header>
     <section>
-      <form>
-       <br>
-
+     <b>
+<label></label>
       <label for="est"></label>
         <strong>
         <b>
+          <b>
+            <tag>
          <i>Procure seu Filme</i>
+        </tag>
         </b>
+      </b>
       </strong>
-
-      </label>
         <input id="est" list="filmes"/>
           <datalist id="filmes">
           <option value="Oppenheimer">
@@ -115,20 +130,27 @@ div{
           <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
           <button type="reset" class="btn btn-primary btn-sm">Reiniciar</button>
 
-      </form>
+          <picture>
+            <source srcset="star_wars.jpg" media="(max-width: 600px)">
+            <source srcset="star_wars.jpg" media="(max-width: 1500px)">
+            <source srcset="star_wars.jpg">
+            <img src="star_wars.jpg" alt="star_wars">
+          </picture>
 
-      <img src="Obi_Wan.jpg" alt="Obi_Wan" style= "max-width:300px;align-content:50px;background-position: 100px;">
-
-            <article>
+      <article>
         <h1>Titulo do Filme</h1>
+
         <p>A API OMDb é um serviço web RESTful para obter informações de filmes, todo o conteúdo e imagens do site são contribuídos e mantidos por nossos usuários.</p>
+
         <p>API de pôster está disponível apenas para usuários. Atualmente mais de 280 mil pôsteres, atualizados diariamente com resoluções de até 2.000x3.000.</p>
+
         <h3>Torne-se um Patrono Clicando no Botão Abaixo</h3>
+
         <button type="button" class="btn btn-primary btn-xlg">Torne-se Patrono</button>
           <br>
-          <br
+          <br>
           <strong>
-            <b>Autor Claudionor Pontes
+            <b>Autor: Claudionor Pontes
               <br>
               Análise ⭐⭐⭐⭐⭐
               <br>
